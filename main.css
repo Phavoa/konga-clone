@@ -1,0 +1,286 @@
+
+  main {
+    width: 100%;
+  }
+  
+  .nav-link {
+    display: flex;
+    gap: 5px;
+    margin: 20px 30px;
+  }
+  
+  .nav-link a {
+    text-decoration: none;
+    color: #94004f;
+    font-weight: bold;
+  }
+  
+  .nav-link a:hover {
+    opacity: 0.8;
+  }
+  
+  .ads {
+      position: relative;
+  }
+  
+  .ads h1 {
+    font-size: 2.5rem;
+    margin: 20px 30px;
+    margin-top: 0px;
+    color: rgb(34, 33, 33);
+  }
+  
+  .ads div {
+    width: 100%;
+    height: 100%;
+    /* padding: 30px; */
+    /* background-color: #f2f2f2; */
+  }
+  
+  .ads div img {
+    height: 500px;
+    width: 100%;
+  }
+  
+  /* Products Container */
+  .products {
+    background-color: #f2f2f2;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px; /* Adds space between cards */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Card Container */
+  .card {
+    padding: 5px 15px;
+    border-radius: 3px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image */
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  
+  /* Card Content */
+  .card-content {
+    padding: 10px 0;
+  }
+  
+  /* Card Title */
+  .card-title {
+    font-size: 1em;
+    color: #333;
+    /* font-weight: bold; */
+    margin: 0;
+  }
+  
+  /* Pricing Section */
+  .pricing {
+    border-top: 1px solid #c8c7c7;
+    border-bottom: 1px solid #c8c7c7;
+    padding: 10px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .current-price {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  
+  .original-price {
+    font-size: 0.85em;
+    color: #888;
+    text-decoration: line-through;
+  }
+  
+  .discount {
+    font-size: 0.8em;
+    color: rgb(250, 58, 90);
+    background-color: pink;
+    padding: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  
+  /* Time Remaining Section */
+  .time-remaining {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+    font-size: 0.8em;
+    border-bottom: 1px solid #c8c7c7;
+    padding: 10px 0;
+  }
+  
+  /* Sold Section */
+  .sold {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 10px 0;
+    font-size: 0.8em;
+    color: #333;
+  }
+  
+  .sold p span {
+    font-weight: bold;
+  }
+  
+  .sold input[type="range"] {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 6px;
+    background: linear-gradient(
+      to right,
+      #33b27b var(--progress, 50%),
+      #ddd var(--progress, 50%)
+    );
+    border-radius: 5px;
+    outline: none;
+    overflow: hidden;
+    accent-color: #33b27b;
+  }
+  
+  .sold input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #33b27b;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sold input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #33b27b;
+    cursor: pointer;
+  }
+  
+  .sold input[type="range"]::-ms-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #33b27b;
+    cursor: pointer;
+  }
+  
+  /* Update progress fill based on range value */
+  .sold input[type="range"] {
+    --progress: 52%; /* Example percentage fill; dynamically set this value with JS if needed */
+  }
+  
+  /* Button */
+  .card-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    color: #ed017f;
+    background-color: white;
+    border: 1px solid #ed017f;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .card-button:hover {
+    background-color: #ed017f;
+    color: white;
+  }
+
+
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  .nav-link {
+    gap: 3px;
+    margin: 12px 20px;
+  }
+
+  .ads h1 {
+    font-size: 2rem;
+    margin: 12px 20px;
+  }
+  
+  .ads div img {
+    height: 250px;
+    width: 100%;
+  }
+  
+  /* Products Container */
+  .products {
+    padding: 0 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .card-content {
+    padding: 7px 0;
+  }
+  
+  .card-title {
+    font-size: 13px;
+  }
+  
+  .current-price {
+    font-size: 1em;
+  }
+  
+  .original-price {
+    font-size: 0.65em;
+  }
+  
+  .discount {
+    font-size: 0.5em;
+    padding: 2px;
+  }
+  
+  .time-remaining {
+    gap: 3px;
+    font-size: 0.7em;
+    padding: 7px 0;
+  }
+  
+  .sold {
+    margin: 8px 0;
+    font-size: 0.7em;
+  }
+  
+  .sold input[type="range"] {
+    height: 5px;
+  }
+  
+  .card-button {
+    padding: 8px 0;
+    font-size: 0.8em;
+  }
+  
+  }
+  

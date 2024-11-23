@@ -1,0 +1,298 @@
+.nav12 {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-logo-group,
+.navbar-content,
+.navbar-content-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* nav-ads styles */
+.nav-ads img {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* navbar1 styles */
+.navbar-logo-group {
+  gap: 0 50px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+/* Styles for the second navigation bar */
+.navbar2 {
+  background-color: #ed017f;
+  height: 60px;
+}
+
+/* Container for navbar content */
+.navbar-content,
+.navbar-content-3 {
+  gap: 0 15px;
+  height: 100%;
+}
+
+/* Individual navigation items with hover scaling effect */
+.nav-item {
+  padding: 0 13px;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease; /* Animation for scaling */
+}
+
+.nav-item:hover {
+  background-color: white;
+  color: #ed017f;
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Ensures anchor tag color matches hover styles */
+.nav-item:hover > a {
+  color: #ed017f;
+}
+
+/* Logo image settings */
+.navbar-logo > img {
+  width: 100px;
+}
+
+/* Text styling for navigation */
+.nav-text {
+  font-size: 13px;
+}
+
+/* Search bar container */
+.search-container {
+  width: 37.5rem;
+  display: flex;
+}
+
+/* Input field for search */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Search button styles with hover scaling effect */
+.search-button {
+  padding: 1px 6px;
+  background-color: #fba100;
+  width: 2.8125rem;
+  border: 0;
+  border-radius: 0 4px 4px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.search-button:hover {
+  transform: scale(1.1);
+}
+
+/* Image inside the search button */
+.search-button > img {
+  margin-top: 5px;
+}
+
+.question-mark {
+  background-color: #f24ea6;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Help container for dropdown */
+.help-container {
+  display: flex;
+  position: relative;
+  gap: 10px;
+}
+
+/* Dropdown menu for help options with fade and slide effect */
+.help-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  background-color: rgb(251, 251, 251);
+  color: black;
+  width: 250px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.9s ease, transform 0.3s ease;
+  transform: translateY(10px);
+}
+
+.help-container:hover > .help-dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Individual help options */
+.help-option {
+  text-decoration: none;
+  list-style: none;
+  padding: 10px 15px;
+  font-size: 13px;
+}
+
+/* Hover effect for help options */
+.help-option:hover {
+  background-color: rgb(217, 213, 213);
+}
+
+/* Authentication links styling */
+.auth-links > a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hover effect for auth links */
+.auth-links > a:hover {
+  color: #ed017f;
+}
+
+/* Cart button styling with hover enlargement effect */
+.cart-button {
+  background-color: #33b27b;
+  border: none;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 4px;
+  gap: 4px;
+  transition: transform 0.3s ease; /* Animation for scaling */
+}
+
+.cart-button:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Cart count badge styling */
+.cart-count {
+  background-color: white;
+  color: black;
+  padding: 3px;
+  border-radius: 2px;
+}
+
+.navbar3 {
+  background-color: #94004f;
+}
+
+.navbar-content-3 {
+  height: 40px;
+  color: white;
+  gap: 30px;
+}
+
+.navbar-content-3 > .navbar-item:hover {
+  background-color: white;
+  color: black;
+  height: 100%;
+  padding: 10px;
+}
+
+
+.menu {
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar-content .logo {
+    display: none;
+  }
+  .navbar-content {
+    gap: 0;
+  }
+  .nav-text {
+    font-size: 10px;
+  }
+
+  .search-container {
+    width: 17.5rem;
+    display: flex;
+  }
+
+  /* Input field for search */
+  .search-input {
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .search-button {
+    width: 2rem;
+  }
+
+  .question-mark {
+    padding: 1px;
+  }
+
+  .question-mark img {
+    width: 15px;
+  }
+
+  .help-container {
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .help-option {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  .auth-links > a {
+    font-size: 10px;
+  }
+
+  .cart-button {
+    padding: 4px 8px;
+    font-size: 10px;
+    gap: 2px;
+  }
+
+  .navbar-content-3 {
+    gap: 20px;
+    overflow: hidden;
+    font-size: 10px;
+  }
+  
+  .navbar-text {
+    text-wrap: nowrap;
+  }
+
+  .tap {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar1, .nav12 {
+    display: none;
+  }
+}

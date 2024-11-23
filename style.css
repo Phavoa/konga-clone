@@ -1,0 +1,109 @@
+body,
+html,
+body * {
+  font-family: Helvetica Neue, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100%;
+  background-color: #f2f2f2;
+
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic Container and Slider Styling */
+.container {
+    margin: 0 auto;
+    /* max-width: 750px; */
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    width: 500%;
+    /*  Five slides wide */
+    transition: transform 0.5s ease;
+    animation: slide-animation 20s infinite;
+}
+
+.slide {
+    flex: 1 0 100%; /* Each slide takes full width */
+}
+
+.slide img {
+    width: 100%;
+    /* border-radius: 0.5rem; */
+    display: block;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.slider-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.slider-dot:hover,
+#slide1:checked ~ .slider-wrapper .slider-nav label[for="slide1"],
+#slide2:checked ~ .slider-wrapper .slider-nav label[for="slide2"],
+#slide3:checked ~ .slider-wrapper .slider-nav label[for="slide3"],
+#slide4:checked ~ .slider-wrapper .slider-nav label[for="slide4"],
+#slide5:checked ~ .slider-wrapper .slider-nav label[for="slide5"] {
+    background-color: #333;
+}
+
+/* Hidden Radio Buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Animation for Auto Sliding */
+@keyframes slide-animation {
+    0%, 20% { transform: translateX(0); }
+    21%, 40% { transform: translateX(-100%); }
+    41%, 60% { transform: translateX(-200%); }
+    61%, 80% { transform: translateX(-300%); }
+    81%, 100% { transform: translateX(-400%); }
+}
+
+/* CSS to Switch Slides Based on Checked Radio Input */
+#slide1:checked ~ .slider-wrapper .slider { transform: translateX(0); }
+#slide2:checked ~ .slider-wrapper .slider { transform: translateX(-100%); }
+#slide3:checked ~ .slider-wrapper .slider { transform: translateX(-200%); }
+#slide4:checked ~ .slider-wrapper .slider { transform: translateX(-300%); }
+#slide5:checked ~ .slider-wrapper .slider { transform: translateX(-400%); }
